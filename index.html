@@ -2,25 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Downloading your surprise... ❤️</title>
-</head>
-<body>
-    <div style="text-align: center; margin-top: 100px; font-family: sans-serif; color: #4a4a4a;">
-        <h2>✨ Creating your interactive surprise file... ✨</h2>
-        <p>If your download doesn't start automatically in a few seconds, 
-           <a id="manual-download" style="color: #ff65a3; font-weight: bold; text-decoration: none;" href="#">click here to download manually</a>.
-        </p>
-    </div>
-
-    <script>
-        // The complete, fixed code for your interactive website
-        const sourceCode = `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday & 10 Years Together! ❤️</title>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"><\/script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Courier+Prime:wght@400;700&family=Fredoka+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -229,31 +213,4 @@
             const anniversary = new Date(); anniversary.setFullYear(anniversary.getFullYear() - 10);
             function update() {
                 const diff = new Date() - anniversary, days = Math.floor(diff / 86400000), yrs = Math.floor(days / 365), rem = days % 365, mos = Math.floor(rem / 30), finDays = rem % 30;
-                document.getElementById("live-time-counter").innerHTML = \`\${yrs} Years <br> \${mos} Months <br> \${finDays} Days\`;
-            }
-            update(); setInterval(update, 60000);
-        }
-    </script>
-</body>
-</html>`;
-
-        // Turn the source code into a clean, downloadable blob file
-        const blob = new Blob([sourceCode], { type: 'text/html' });
-        const url = URL.createObjectURL(blob);
-        
-        // Setup download anchors
-        const downloadAnchor = document.createElement('a');
-        downloadAnchor.href = url;
-        downloadAnchor.download = 'index.html';
-        
-        // Setup manual recovery link just in case
-        document.getElementById('manual-download').href = url;
-        document.getElementById('manual-download').download = 'index.html';
-        
-        // Auto trigger the download prompt
-        document.body.appendChild(downloadAnchor);
-        downloadAnchor.click();
-        document.body.removeChild(downloadAnchor);
-    </script>
-</body>
-</html>
+                document.getElementById("live-time-counter").innerHTML = \`\${yrs} Years <br> \${mos} Months <br> \${finDays} Days\
